@@ -2,7 +2,9 @@ package com.longzai.singleton;
 
 public class Mar05 {
     // 这为单列模式中的懒汉汉式 在类中直接进行static修饰
-    private static Mar05 INSTANCE;
+    // volatile 保证了不同线程对这个变量进行操作时的可见性，即一个线程修改了某个变量的值，这个新值对其他线程来说是立即可见的。
+    //禁止指令重排序
+    private static volatile Mar05 INSTANCE;// JIT
     // 也需要把构造方法修饰符改为private 防止他人多次进行new对象的操作
     private Mar05(){}
     // 如若我们想要获取对象  那么只需在类中定义一个方法进行获取即可
