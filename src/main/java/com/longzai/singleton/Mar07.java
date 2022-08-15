@@ -2,6 +2,7 @@ package com.longzai.singleton;
 
 /**
  * 枚举单列
+ * 不仅仅可以解决线程同步 还可以防止反序列化
  */
 public enum Mar07 {
     INSTANCE;
