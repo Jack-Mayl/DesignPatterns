@@ -1,5 +1,8 @@
 package com.longzai.singleton;
 
+/**
+ * 枚举单列
+ */
 public enum Mar07 {
     INSTANCE;
 
